@@ -83,10 +83,11 @@ public class ppal {
 
 		// POLIMORFISMO
 		System.out.println(
-				"_________________________________________________________________________________________\n\n					POLIMORFISMO\n_________________________________________________________________________________________");
+				"\n\n		_________________________________________________________________________________________\n\n							POLIMORFISMO\n		_________________________________________________________________________________________");
 		Empleado e = new Comercial("Sonia", "Jaro", 34, 2000, 4, 7);
-		System.out.println("Añadiendo ventas...");
-
+		System.out.println("\n	Anadiendo ventas...");
+		System.out.println("\n	Se han anadido 7 ventas a Sonia.\n");
+		System.out.println("	"+e);
 		// e.contabilizaVentas(5); // NO PODEMOS HACER ESTO PUESTO QUE ES UN METODO DE
 		// COMERCIAL Y E ES UN
 		// EMPLEADO. DEBEMOS HACER UNA CONVERSION CASTING PREVIA
@@ -94,13 +95,13 @@ public class ppal {
 		((Comercial) e).contabilizaVentas(5); // CONVERSION DE E A TIPO COMERCIAL. OJO! ESTO REALIZA UNA COPIA, NO
 												// CONVIERTE E EN UN COMERCIAL!!
 
-		System.out.println("El salario de Sonia es " + e.calculaSalario()); // AL HABER POLIMORFIRMOS EN ESTE METODO, LO
+		System.out.println("\n\n					*******  El salario de Sonia es " + e.calculaSalario()+"	*******"); // AL HABER POLIMORFIRMOS EN ESTE METODO, LO
 																			// BUSCA EN LA SUPERCLASE Y LO COMPLETA CON
 																			// LA SUBCLASE. POR TANTO, FINALMENTE VA AL
 																			// METODO DE CALCULAR SALARIO EN COMERCIAL.
 
 		System.out.println(
-				"_________________________________________________________________________________________\n\n       	        		    POLIMORFISMO- ARRAY\n_________________________________________________________________________________________");
+				"\n		_________________________________________________________________________________________\n\n       	        		    		    POLIMORFISMO- ARRAY\n		_________________________________________________________________________________________");
 		Empleado lista[] = new Empleado[5];
 		lista[0] = new Empleado("Luis", "Lopez", 45, 1400, 2);
 		lista[1] = new Comercial("Ana", "Martin", 33, 1650, 7, 6);
@@ -108,10 +109,10 @@ public class ppal {
 		lista[3] = new Repartidor("Pedro", "Marin", 55, 1970, 17, "Extremadura", "1111PLK", 63540, 68730, 125);
 		lista[4] = new Repartidor("Julia", "Martinez", 61, 2058, 24, "Murcia", "1578GHB", 122584, 126312, 89);
 
-		System.out.println("Mostrando listado de empleados...\n");
+		System.out.println("\n	Mostrando listado de empleados y salarios de este mes...\n");
 		for (int i = 0; i <= 4; i++) {
-			System.out.println(lista[i]);
-			System.out.println("Salario este mes "+lista[i].calculaSalario());
+			System.out.println("	"+lista[i]);
+			System.out.println("	Salario este mes "+lista[i].calculaSalario()+"\n");
 		}
 		
 		
@@ -123,7 +124,7 @@ public class ppal {
 				total=total+aux.getKmFinMes()-aux.getKmInicioMes();
 			}
 		}
-		System.out.println("\n		*******  Se han recorrido este mes "+total+" kms. 	******* ");
+		System.out.println("\n					*******  Se han recorrido este mes "+total+" kms. 	******* ");
 
 	}
 
